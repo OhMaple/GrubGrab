@@ -48,14 +48,15 @@ Managing the data and user interactions within the application falls upon ***Res
 
 
 
+> Images were too big so nevermind but I will keep the titles here 👉👈😊
 ## Current Main Screen For Restaurant
-![image](https://github.com/OhMaple/GrubGrab/assets/96153773/128e6af8-26c4-4260-88cc-02bb73eedfa0)
+
 
 ## Adding Restuarant Dialog
-![image](https://github.com/OhMaple/GrubGrab/assets/96153773/c3230511-18a6-4390-ba52-611e2c89e27c)
+
 
 ## Restaurants Added, Sorted by Restaurant Name Ascending Order
-![image](https://github.com/OhMaple/GrubGrab/assets/96153773/7a35294d-083f-4723-84ec-a3e5641504d0)
+
 
 ## Restaurants Added, Sorted by Restaurant Name Descending Order
-![image](https://github.com/OhMaple/GrubGrab/assets/96153773/9285cdff-36e3-46af-9fea-3659d696a93b)
+

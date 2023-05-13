@@ -2,7 +2,7 @@
 _Complex Systems Coursework 2 Project by Jasmin Lord (24623458) and Lucy Williamson (24522716) for Edge Hill University - BSc Computer Science_
 
 ## About the app 🥘
-GrubGrab is an Android app that allows users to order food from their favourite restaurants from their phone!
+GrubGrab is an Android app created using Kotlin and Jetpack Compose that allows users to order food from their favourite restaurants from their phone!
 
 ## Functionality of Each File 🍔
 The ***MainActivity*** class is responsible for setting up the main activity of the app. It initializes the database and the view model, and sets the content of the screen using Jetpack Compose.

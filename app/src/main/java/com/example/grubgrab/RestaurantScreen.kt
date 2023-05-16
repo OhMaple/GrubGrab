@@ -1,4 +1,5 @@
 package com.example.grubgrab
+// Import statements
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
@@ -17,14 +18,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-// CHECK ADDRESS SHITE
+// Composable function 'RestaurantScreen'
 @Composable
 fun RestaurantScreen(
-    state: RestaurantState,
-    onEvent: (RestaurantEvent) -> Unit
+    state: RestaurantState,  // State of the Restaurant application
+    onEvent: (RestaurantEvent) -> Unit  // Lambda function for handling RestaurantEvents
 ) {
+    // Scaffold Composable that provides a basic layout for the screen
     Scaffold(
         floatingActionButton = {
+            // Floating Action Button for adding new Restaurants
             FloatingActionButton(onClick = {
                 onEvent(RestaurantEvent.ShowDialog)
             }) {
@@ -35,15 +38,18 @@ fun RestaurantScreen(
         },
         modifier = Modifier.padding(16.dp)
     ) { padding ->
+        // Check whether the user is adding a new Restaurant, then show AddRestaurantDialog
         if(state.isAddingRestaurant) {
             AddRestaurantDialog(state = state, onEvent = onEvent)
         }
 
+        // LazyColumn for the list of Restaurants
         LazyColumn(
             contentPadding = padding,
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            // First item of the list consists of the options for sorting:
             item {
                 Row(
                     modifier = Modifier
@@ -51,6 +57,7 @@ fun RestaurantScreen(
                         .horizontalScroll(rememberScrollState()),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
+                    // Loop through all the sort types previously configured, and display them in Radio Buttons
                     SortType.values().forEach { sortType ->
                         Row(
                             modifier = Modifier
@@ -71,6 +78,7 @@ fun RestaurantScreen(
 
                 }
             }
+            // Display each Restaurant in a Row
             items(state.restaurants) { restaurant ->
                 Row(
                     modifier = Modifier.fillMaxWidth()
@@ -91,6 +99,7 @@ fun RestaurantScreen(
                             fontSize = 16.sp
                         )
                     }
+                    // IconButton for deleting a Restaurant
                     IconButton(onClick = {
                         onEvent(RestaurantEvent.DeleteRestaurant(restaurant))
                     }) {

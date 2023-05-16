@@ -1,5 +1,6 @@
 package com.example.grubgrab
 
+// Import statements
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -19,8 +20,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
 import com.example.compose.GrubGrabTheme
 
+// MainActivity Class
 class MainActivity : AppCompatActivity() {
 
+    // Database instance
     private val db by lazy {
         Room.databaseBuilder(
             applicationContext,
@@ -29,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         ).build()
     }
 
+    // View Model instance
     private val viewModel by viewModels<RestaurantViewModel>(
         factoryProducer = {
             object : ViewModelProvider.Factory {
@@ -40,6 +44,7 @@ class MainActivity : AppCompatActivity() {
     )
 
 
+    // onCreate method
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

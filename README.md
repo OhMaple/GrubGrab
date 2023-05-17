@@ -33,17 +33,3 @@ The main user interface (UI) of the application is created within the ***Restaur
 Managing the data and user interactions within the application falls upon ***RestaurantViewModel***, which acts as a bridge between the UI layer and the database. Essentially maps a user interaction to an event/function to be performed. These events are defined in _'RestaurantEvent'_.
 
 ***SortType*** is an enum to represent the names for different sorting options such as name_asc for sorting by restaurant name in ascending order, or name_desc for sorting by restaurant name in descending order. 
-
-
-> Images were too big so nevermind but I will keep the titles here 👉👈😊
-## Current Main Screen For Restaurant
-
-
-## Adding Restuarant Dialog
-
-
-## Restaurants Added, Sorted by Restaurant Name Ascending Order
-
-
-## Restaurants Added, Sorted by Restaurant Name Descending Order
-

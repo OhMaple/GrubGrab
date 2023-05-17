@@ -1,4 +1,4 @@
-package com.example.grubgrab
+package com.example.grubgrab.restaurant
 
 data class RestaurantState(
     val restaurants: List<Restaurant> = emptyList(),

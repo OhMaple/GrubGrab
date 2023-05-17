@@ -1,8 +1,10 @@
-package com.example.grubgrab
+package com.example.grubgrab.restaurant
 
 // Import statements
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.example.grubgrab.restaurant.Restaurant
+import com.example.grubgrab.restaurant.RestaurantDao
 
 // Annotating the Room Database 'RestaurantDatabase', with 1 entity 'Restaurant' and version 1
 @Database(

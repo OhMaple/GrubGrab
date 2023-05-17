@@ -1,4 +1,4 @@
-package com.example.grubgrab
+package com.example.grubgrab.restaurant
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

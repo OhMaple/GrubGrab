@@ -1,4 +1,4 @@
-package com.example.grubgrab
+package com.example.grubgrab.restaurant
 
 // Sealed interface 'RestaurantEvent'
 sealed interface RestaurantEvent{

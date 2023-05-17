@@ -1,11 +1,11 @@
-package com.example.grubgrab
+package com.example.grubgrab.restaurant
 
 // Import statements
 import androidx.room.Dao
 import androidx.room.Delete
-import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Upsert
+import com.example.grubgrab.restaurant.Restaurant
 import kotlinx.coroutines.flow.Flow
 
 // Data Access Object - How data within the 'Restaurant' entity is managed

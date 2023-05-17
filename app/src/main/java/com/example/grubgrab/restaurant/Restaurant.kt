@@ -1,4 +1,4 @@
-package com.example.grubgrab
+package com.example.grubgrab.restaurant
 
 // Import statements
 import androidx.room.Entity
@@ -12,5 +12,5 @@ data class Restaurant(
     val contactNum: String,
     val address: String,
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0
+    val RestID: Int = 0
 )

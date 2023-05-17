@@ -1,4 +1,4 @@
-package com.example.grubgrab
+package com.example.grubgrab.restaurant
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

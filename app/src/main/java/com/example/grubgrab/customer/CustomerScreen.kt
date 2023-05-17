@@ -18,6 +18,8 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -26,11 +28,14 @@ import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.grubgrab.Screen
 
 @Composable
 fun CustomerScreen(
     state: CustomerState,
-    onEvent: (CustomerEvent) -> Unit
+    onEvent: (CustomerEvent) -> Unit,
+    navController: NavController
 ) {
     Scaffold(
         floatingActionButton = {
@@ -109,6 +114,15 @@ fun CustomerScreen(
                         Icon(
                             imageVector = Icons.Default.Delete,
                             contentDescription = "Delete Customer"
+                        )
+                    }
+                    // IconButton for navigation for now
+                    IconButton(onClick = {
+                        navController.navigate(Screen.RestaurantScreen.route)
+                    }) {
+                        Icon(
+                            imageVector = Icons.Default.Menu,
+                            contentDescription = "Restuarant"
                         )
                     }
                 }

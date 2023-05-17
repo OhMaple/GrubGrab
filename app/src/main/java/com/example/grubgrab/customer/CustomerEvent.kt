@@ -3,6 +3,10 @@ package com.example.grubgrab.customer
 sealed interface CustomerEvent{
     object SaveCustomer: CustomerEvent
 
+    object NavigateRestaurant: CustomerEvent
+
+    object CancelNavigation: CustomerEvent
+
     data class SetCustomerFirstName(val firstName: String): CustomerEvent
 
     data class SetCustomerLastName(val lastName: String): CustomerEvent

@@ -10,18 +10,23 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.grubgrab.Screen
 
 // Composable function 'RestaurantScreen'
 @Composable
 fun RestaurantScreen(
     state: RestaurantState,  // State of the Restaurant application
-    onEvent: (RestaurantEvent) -> Unit  // Lambda function for handling RestaurantEvents
+    onEvent: (RestaurantEvent) -> Unit,  // Lambda function for handling RestaurantEvents
+    navController: NavController
 ) {
     // Scaffold Composable that provides a basic layout for the screen
     Scaffold(
@@ -105,6 +110,16 @@ fun RestaurantScreen(
                         Icon(
                             imageVector = Icons.Default.Delete,
                             contentDescription = "Delete Restaurant"
+                        )
+                    }
+
+                    // IconButton for navigation for now
+                    IconButton(onClick = {
+                        navController.navigate(Screen.CustomerScreen.route)
+                    }) {
+                        Icon(
+                            imageVector = Icons.Default.Person,
+                            contentDescription = "Customer"
                         )
                     }
                 }

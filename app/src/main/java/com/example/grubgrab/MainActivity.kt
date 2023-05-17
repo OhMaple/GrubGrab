@@ -9,6 +9,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.compose.rememberNavController
 import androidx.room.Room
 import com.example.compose.GrubGrabTheme
 import com.example.grubgrab.restaurant.RestaurantDatabase
@@ -45,7 +46,8 @@ class MainActivity : AppCompatActivity() {
         setContent {
             GrubGrabTheme {
                 val state by viewModel.state.collectAsState()
-                RestaurantScreen(state = state, onEvent = viewModel::onEvent)
+                RestaurantScreen(state = state, onEvent = viewModel::onEvent, navController =
+                )
             }
         }
     }

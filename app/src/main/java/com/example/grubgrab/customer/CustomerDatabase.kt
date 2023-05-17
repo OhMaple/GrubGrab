@@ -2,6 +2,7 @@ package com.example.grubgrab.customer
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.example.grubgrab.order.Order
 
 // Annotating the Room Database 'CustomerDatabase', with 2 entities, 'Customer' and 'Order' and version 1
 @Database(
